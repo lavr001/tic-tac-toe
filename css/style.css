@@ -76,11 +76,13 @@ body {
   /*position: absolute;*/
   text-align: center;
   /*margin: 0 auto;*/
-  /*left: -150px;*/
+  /*left: 0;*/
   display: inline-block;
   font-size: 30px;
   font-family: 'Fredericka the Great', cursive;
   color: #F7310E;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 #loser {

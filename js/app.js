@@ -206,7 +206,7 @@ $(document).ready(function() {
     counter = 0;
     $('.box').empty();
     $('#winner').empty();
-    $('#loser').empty();
+    // $('#loser').empty();
     $('.box').removeClass('xStyle oStyle');
     for (var i = 0; i < clickedBoxes.length; i++) {
       clickedBoxes[i] = false;
@@ -248,17 +248,16 @@ $(document).ready(function() {
   function horizontalPl1 () {
     if ($('#box1').is('.xStyle') && $('#box2').is('.xStyle') && $('#box3').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player2.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box1', '#box2', '#box3');
-    }
-    if ($('#box4').is('.xStyle') && $('#box5').is('.xStyle') && $('#box6').is('.xStyle')) {
+    }    if ($('#box4').is('.xStyle') && $('#box5').is('.xStyle') && $('#box6').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player2.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box4', '#box5', '#box6');
     }
     if ($('#box7').is('.xStyle') && $('#box8').is('.xStyle') && $('#box9').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player2.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box7', '#box8', '#box9');
     }
   }
@@ -266,17 +265,17 @@ $(document).ready(function() {
   function horizontalPl2 () {
     if ($('#box1').is('.oStyle') && $('#box2').is('.oStyle') && $('#box3').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player1.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player1.toUpperCase());
       changeBackground ('#box1', '#box2', '#box3');
     }
     if ($('#box4').is('.oStyle') && $('#box5').is('.oStyle') && $('#box6').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player1.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player1.toUpperCase());
       changeBackground ('#box4', '#box5', '#box6');
     }
     if ($('#box7').is('.oStyle') && $('#box8').is('.oStyle') && $('#box9').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player1.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player1.toUpperCase());
       changeBackground ('#box7', '#box8', '#box9');
     }
   }
@@ -284,17 +283,17 @@ $(document).ready(function() {
   function verticalPl1 () {
     if ($('#box1').is('.xStyle') && $('#box4').is('.xStyle') && $('#box7').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player2.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box1', '#box4', '#box7');
     }
     if ($('#box2').is('.xStyle') && $('#box5').is('.xStyle') && $('#box8').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player2.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box2', '#box5', '#box8');
     }
     if ($('#box3').is('.xStyle') && $('#box6').is('.xStyle') && $('#box9').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player2.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box3', '#box6', '#box9');
     }
   }
@@ -302,17 +301,17 @@ $(document).ready(function() {
   function verticalPl2 () {
     if ($('#box1').is('.oStyle') && $('#box4').is('.oStyle') && $('#box7').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player1.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player1.toUpperCase());
       changeBackground ('#box1', '#box4', '#box7');
     }
     if ($('#box2').is('.oStyle') && $('#box5').is('.oStyle') && $('#box8').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player1.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player1.toUpperCase());
       changeBackground ('#box2', '#box5', '#box8');
     }
     if ($('#box3').is('.oStyle') && $('#box6').is('.oStyle') && $('#box9').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player1.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player1.toUpperCase());
       changeBackground ('#box3', '#box6', '#box9');
     }
   }
@@ -320,12 +319,12 @@ $(document).ready(function() {
   function diagonalPl1 () {
     if ($('#box1').is('.xStyle') && $('#box5').is('.xStyle') && $('#box9').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player2.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box1', '#box5', '#box9');
     }
     if ($('#box3').is('.xStyle') && $('#box5').is('.xStyle') && $('#box7').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player2.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box3', '#box5', '#box7');
     }
   }
@@ -333,12 +332,12 @@ $(document).ready(function() {
   function diagonalPl2 () {
     if ($('#box1').is('.oStyle') && $('#box5').is('.oStyle') && $('#box9').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player1.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player1.toUpperCase());
       changeBackground ('#box1', '#box5', '#box9');
     }
     if ($('#box3').is('.oStyle') && $('#box5').is('.oStyle') && $('#box7').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      $('#loser').text('Better luck next time ' + Player13.toUpperCase());
+      // $('#loser').text('Better luck next time ' + Player13.toUpperCase());
       changeBackground ('#box3', '#box5', '#box7');
     }
   }
