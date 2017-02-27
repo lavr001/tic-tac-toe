@@ -25,12 +25,7 @@ $(document).ready(function() {
     }
     clickedBoxes[0] = true;
     draw(clickedBoxes);
-    horizontalPl1();
-    horizontalPl2();
-    verticalPl1();
-    verticalPl2();
-    diagonalPl1();
-    diagonalPl2();
+    isWinner();
   });
   $($('.box')[1]).on('click', function () {
     if (clickedBoxes[1] === false) {
@@ -46,12 +41,7 @@ $(document).ready(function() {
     }
     clickedBoxes[1] = true;
     draw(clickedBoxes);
-    horizontalPl1();
-    horizontalPl2();
-    verticalPl1();
-    verticalPl2();
-    diagonalPl1();
-    diagonalPl2();
+    isWinner();
   });
   $($('.box')[2]).on('click', function () {
     if (clickedBoxes[2] === false) {
@@ -67,12 +57,7 @@ $(document).ready(function() {
     }
     clickedBoxes[2] = true;
     draw(clickedBoxes);
-    horizontalPl1();
-    horizontalPl2();
-    verticalPl1();
-    verticalPl2();
-    diagonalPl1();
-    diagonalPl2();
+    isWinner();
   });
   $($('.box')[3]).on('click', function () {
     if (clickedBoxes[3] === false) {
@@ -88,12 +73,7 @@ $(document).ready(function() {
     }
     clickedBoxes[3] = true;
     draw(clickedBoxes);
-    horizontalPl1();
-    horizontalPl2();
-    verticalPl1();
-    verticalPl2();
-    diagonalPl1();
-    diagonalPl2();
+    isWinner();
   });
   $($('.box')[4]).on('click', function () {
     if (clickedBoxes[4] === false) {
@@ -109,12 +89,7 @@ $(document).ready(function() {
     }
     clickedBoxes[4] = true;
     draw(clickedBoxes);
-    horizontalPl1();
-    horizontalPl2();
-    verticalPl1();
-    verticalPl2();
-    diagonalPl1();
-    diagonalPl2();
+    isWinner();
   });
   $($('.box')[5]).on('click', function () {
     if (clickedBoxes[5] === false) {
@@ -130,12 +105,7 @@ $(document).ready(function() {
     }
     clickedBoxes[5] = true;
     draw(clickedBoxes);
-    horizontalPl1();
-    horizontalPl2();
-    verticalPl1();
-    verticalPl2();
-    diagonalPl1();
-    diagonalPl2();
+    isWinner();
   });
   $($('.box')[6]).on('click', function () {
     if (clickedBoxes[6] === false) {
@@ -151,12 +121,7 @@ $(document).ready(function() {
     }
     clickedBoxes[6] = true;
     draw(clickedBoxes);
-    horizontalPl1();
-    horizontalPl2();
-    verticalPl1();
-    verticalPl2();
-    diagonalPl1();
-    diagonalPl2();
+    isWinner();
   });
   $($('.box')[7]).on('click', function () {
     if (clickedBoxes[7] === false) {
@@ -172,12 +137,7 @@ $(document).ready(function() {
     }
     clickedBoxes[7] = true;
     draw(clickedBoxes);
-    horizontalPl1();
-    horizontalPl2();
-    verticalPl1();
-    verticalPl2();
-    diagonalPl1();
-    diagonalPl2();
+    isWinner();
   });
   $($('.box')[8]).on('click', function () {
     if (clickedBoxes[8] === false) {
@@ -193,14 +153,8 @@ $(document).ready(function() {
     }
     clickedBoxes[8] = true;
     draw(clickedBoxes);
-    horizontalPl1();
-    horizontalPl2();
-    verticalPl1();
-    verticalPl2();
-    diagonalPl1();
-    diagonalPl2();
+    isWinner();
   });
-
 
   $('#reset').on('click', function resetBoard () {
     counter = 0;
@@ -217,11 +171,6 @@ $(document).ready(function() {
     $('.box').css('background-color', '#FFB424');
   });
 
-  // function turn () {
-  //   if (counter === 0) {
-
-  //   }
-  // }
   var interval;
   function changeBackground (arg1, arg2, arg3) {
     var isTrue = false;
@@ -245,19 +194,20 @@ $(document).ready(function() {
     }
   }
 
+  function isWinner () {
+    return horizontalPl1() || horizontalPl2() || verticalPl1() || verticalPl2() || diagonalPl1() || diagonalPl2();
+  }
+
   function horizontalPl1 () {
     if ($('#box1').is('.xStyle') && $('#box2').is('.xStyle') && $('#box3').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box1', '#box2', '#box3');
     }    if ($('#box4').is('.xStyle') && $('#box5').is('.xStyle') && $('#box6').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box4', '#box5', '#box6');
     }
     if ($('#box7').is('.xStyle') && $('#box8').is('.xStyle') && $('#box9').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box7', '#box8', '#box9');
     }
   }
@@ -265,17 +215,14 @@ $(document).ready(function() {
   function horizontalPl2 () {
     if ($('#box1').is('.oStyle') && $('#box2').is('.oStyle') && $('#box3').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player1.toUpperCase());
       changeBackground ('#box1', '#box2', '#box3');
     }
     if ($('#box4').is('.oStyle') && $('#box5').is('.oStyle') && $('#box6').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player1.toUpperCase());
       changeBackground ('#box4', '#box5', '#box6');
     }
     if ($('#box7').is('.oStyle') && $('#box8').is('.oStyle') && $('#box9').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player1.toUpperCase());
       changeBackground ('#box7', '#box8', '#box9');
     }
   }
@@ -283,17 +230,14 @@ $(document).ready(function() {
   function verticalPl1 () {
     if ($('#box1').is('.xStyle') && $('#box4').is('.xStyle') && $('#box7').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box1', '#box4', '#box7');
     }
     if ($('#box2').is('.xStyle') && $('#box5').is('.xStyle') && $('#box8').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box2', '#box5', '#box8');
     }
     if ($('#box3').is('.xStyle') && $('#box6').is('.xStyle') && $('#box9').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box3', '#box6', '#box9');
     }
   }
@@ -301,17 +245,14 @@ $(document).ready(function() {
   function verticalPl2 () {
     if ($('#box1').is('.oStyle') && $('#box4').is('.oStyle') && $('#box7').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player1.toUpperCase());
       changeBackground ('#box1', '#box4', '#box7');
     }
     if ($('#box2').is('.oStyle') && $('#box5').is('.oStyle') && $('#box8').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player1.toUpperCase());
       changeBackground ('#box2', '#box5', '#box8');
     }
     if ($('#box3').is('.oStyle') && $('#box6').is('.oStyle') && $('#box9').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player1.toUpperCase());
       changeBackground ('#box3', '#box6', '#box9');
     }
   }
@@ -319,12 +260,10 @@ $(document).ready(function() {
   function diagonalPl1 () {
     if ($('#box1').is('.xStyle') && $('#box5').is('.xStyle') && $('#box9').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box1', '#box5', '#box9');
     }
     if ($('#box3').is('.xStyle') && $('#box5').is('.xStyle') && $('#box7').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player2.toUpperCase());
       changeBackground ('#box3', '#box5', '#box7');
     }
   }
@@ -332,12 +271,10 @@ $(document).ready(function() {
   function diagonalPl2 () {
     if ($('#box1').is('.oStyle') && $('#box5').is('.oStyle') && $('#box9').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player1.toUpperCase());
       changeBackground ('#box1', '#box5', '#box9');
     }
     if ($('#box3').is('.oStyle') && $('#box5').is('.oStyle') && $('#box7').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
-      // $('#loser').text('Better luck next time ' + Player13.toUpperCase());
       changeBackground ('#box3', '#box5', '#box7');
     }
   }
