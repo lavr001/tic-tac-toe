@@ -236,7 +236,7 @@ $(document).ready(function() {
         $(arg3).css('background', '#27FF1C');
       }
       isTrue = !isTrue; //changing from false to true
-    }, 300);
+    }, 200);
   }
 
   function draw (clickedBoxes) {
