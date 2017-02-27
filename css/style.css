@@ -24,7 +24,7 @@ body {
 }*/
 
 #board {
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 .box {
@@ -47,20 +47,50 @@ body {
   color: #1325FF;
 }
 
-button {
-  margin-left: 20px;
+/*button {
+  margin-left: 50px;
+  margin-top: 50px;
   border-radius: 10px;
+  font-size: 25px;
+  font-family: 'Fredericka the Great', cursive;
+}*/
+
+.btn-circle {
+  border-radius: 50%;
+}
+
+.btn-primary.btn-circle{
+  -webkit-box-shadow: 3px 3px 3px 1px #245580;
+/*  -moz-box-shadow:    0px 0px 3px 1px #245580;*/
+  box-shadow:         3px 3px 3px 1px #245580;
+  margin-left: 60px;
   font-size: 25px;
   font-family: 'Fredericka the Great', cursive;
 }
 
+#reset:focus {
+  outline:0;
+}
+
 #winner {
+  /*position: absolute;*/
   text-align: center;
-  font-size: 40px;
+  /*margin: 0 auto;*/
+  /*left: -150px;*/
+  display: inline-block;
+  font-size: 30px;
+  font-family: 'Fredericka the Great', cursive;
+  color: #F7310E;
+}
+
+#loser {
+  font-size: 30px;
+  text-align: center;
   font-family: 'Fredericka the Great', cursive;
 }
 
 h1 {
   font-family: 'Fredericka the Great', cursive;
   font-size: 55px;
+  /*position: relative;*/
 }
