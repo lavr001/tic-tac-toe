@@ -2,6 +2,7 @@
 $(document).ready(function() {
   // all code to manipulate the DOM
 
+  //ahhhh where is the camelCase!
   var Player1 = prompt('Enter player 1 name');
   var Player2 = prompt('Enter player 2 name');
 
@@ -11,6 +12,9 @@ $(document).ready(function() {
 
   var counter = 0;
 
+//I bet you could condense this code and pass in an input for the array index since it is a lot
+//of repetition.
+//logic works though
   $($('.box')[0]).on('click', function () {
     if (clickedBoxes[0] === false) {
       if (counter % 2 === 0) {
@@ -194,10 +198,12 @@ $(document).ready(function() {
     }
   }
 
+  //good master function
   function isWinner () {
     return horizontalPl1() || horizontalPl2() || verticalPl1() || verticalPl2() || diagonalPl1() || diagonalPl2();
   }
 
+  //I bet you could pull out the #winner text setting out into a separate function
   function horizontalPl1 () {
     if ($('#box1').is('.xStyle') && $('#box2').is('.xStyle') && $('#box3').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
@@ -279,8 +285,3 @@ $(document).ready(function() {
     }
   }
 });
-
-
-
-
-

@@ -5,6 +5,7 @@ body {
   background-repeat: none;
 }
 
+/*remove unused code :)
 /*@keyframes color-animation {
     % {
       background: #ad1457;
@@ -24,7 +25,7 @@ body {
 }*/
 
 #board {
-  margin-top: 40px;
+  margin-top: auto;
 }
 
 .box {
@@ -47,13 +48,6 @@ body {
   color: #1325FF;
 }
 
-/*button {
-  margin-left: 50px;
-  margin-top: 50px;
-  border-radius: 10px;
-  font-size: 25px;
-  font-family: 'Fredericka the Great', cursive;
-}*/
 
 .btn-circle {
   border-radius: 50%;
@@ -72,17 +66,18 @@ body {
   outline:0;
 }
 
+/*I fixed your style issue I believe :) basically fix the height to be what your text size plus padding is.
 #winner {
   /*position: absolute;*/
   text-align: center;
   /*margin: 0 auto;*/
   /*left: 0;*/
+  height: 40px;
   display: inline-block;
   font-size: 30px;
   font-family: 'Fredericka the Great', cursive;
   color: #F7310E;
-  padding-bottom: 0;
-  margin-bottom: 0;
+  padding-bottom: 10px;
 }
 
 #loser {
