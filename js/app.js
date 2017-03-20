@@ -1,6 +1,4 @@
-// wait for the DOM to finish loading
 $(document).ready(function() {
-  // all code to manipulate the DOM
 
   var Player1 = prompt('Enter player 1 name');
   var Player2 = prompt('Enter player 2 name');
@@ -160,7 +158,6 @@ $(document).ready(function() {
     counter = 0;
     $('.box').empty();
     $('#winner').empty();
-    // $('#loser').empty();
     $('.box').removeClass('xStyle oStyle');
     for (var i = 0; i < clickedBoxes.length; i++) {
       clickedBoxes[i] = false;
@@ -202,7 +199,8 @@ $(document).ready(function() {
     if ($('#box1').is('.xStyle') && $('#box2').is('.xStyle') && $('#box3').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
       changeBackground ('#box1', '#box2', '#box3');
-    }    if ($('#box4').is('.xStyle') && $('#box5').is('.xStyle') && $('#box6').is('.xStyle')) {
+    }
+    if ($('#box4').is('.xStyle') && $('#box5').is('.xStyle') && $('#box6').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
       changeBackground ('#box4', '#box5', '#box6');
     }
@@ -279,8 +277,4 @@ $(document).ready(function() {
     }
   }
 });
-
-
-
-
 
