@@ -199,14 +199,17 @@ $(document).ready(function() {
     if ($('#box1').is('.xStyle') && $('#box2').is('.xStyle') && $('#box3').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
       changeBackground ('#box1', '#box2', '#box3');
+      $('.box').off('click');
     }
     if ($('#box4').is('.xStyle') && $('#box5').is('.xStyle') && $('#box6').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
       changeBackground ('#box4', '#box5', '#box6');
+      $('.box').off('click');
     }
     if ($('#box7').is('.xStyle') && $('#box8').is('.xStyle') && $('#box9').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
       changeBackground ('#box7', '#box8', '#box9');
+      $('.box').off('click');
     }
   }
 
@@ -214,14 +217,17 @@ $(document).ready(function() {
     if ($('#box1').is('.oStyle') && $('#box2').is('.oStyle') && $('#box3').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
       changeBackground ('#box1', '#box2', '#box3');
+      $('.box').off('click');
     }
     if ($('#box4').is('.oStyle') && $('#box5').is('.oStyle') && $('#box6').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
       changeBackground ('#box4', '#box5', '#box6');
+      $('.box').off('click');
     }
     if ($('#box7').is('.oStyle') && $('#box8').is('.oStyle') && $('#box9').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
       changeBackground ('#box7', '#box8', '#box9');
+      $('.box').off('click');
     }
   }
 
@@ -229,14 +235,17 @@ $(document).ready(function() {
     if ($('#box1').is('.xStyle') && $('#box4').is('.xStyle') && $('#box7').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
       changeBackground ('#box1', '#box4', '#box7');
+      $('.box').off('click');
     }
     if ($('#box2').is('.xStyle') && $('#box5').is('.xStyle') && $('#box8').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
       changeBackground ('#box2', '#box5', '#box8');
+      $('.box').off('click');
     }
     if ($('#box3').is('.xStyle') && $('#box6').is('.xStyle') && $('#box9').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
       changeBackground ('#box3', '#box6', '#box9');
+      $('.box').off('click');
     }
   }
 
@@ -244,14 +253,17 @@ $(document).ready(function() {
     if ($('#box1').is('.oStyle') && $('#box4').is('.oStyle') && $('#box7').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
       changeBackground ('#box1', '#box4', '#box7');
+      $('.box').off('click');
     }
     if ($('#box2').is('.oStyle') && $('#box5').is('.oStyle') && $('#box8').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
       changeBackground ('#box2', '#box5', '#box8');
+      $('.box').off('click');
     }
     if ($('#box3').is('.oStyle') && $('#box6').is('.oStyle') && $('#box9').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
       changeBackground ('#box3', '#box6', '#box9');
+      $('.box').off('click');
     }
   }
 
@@ -259,10 +271,12 @@ $(document).ready(function() {
     if ($('#box1').is('.xStyle') && $('#box5').is('.xStyle') && $('#box9').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
       changeBackground ('#box1', '#box5', '#box9');
+      $('.box').off('click');
     }
     if ($('#box3').is('.xStyle') && $('#box5').is('.xStyle') && $('#box7').is('.xStyle')) {
       $('#winner').text(Player1.toUpperCase() + ' is on fire today!');
       changeBackground ('#box3', '#box5', '#box7');
+      $('.box').off('click');
     }
   }
 
@@ -270,11 +284,12 @@ $(document).ready(function() {
     if ($('#box1').is('.oStyle') && $('#box5').is('.oStyle') && $('#box9').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
       changeBackground ('#box1', '#box5', '#box9');
+      $('.box').off('click');
     }
     if ($('#box3').is('.oStyle') && $('#box5').is('.oStyle') && $('#box7').is('.oStyle')) {
       $('#winner').text(Player2.toUpperCase() + ' is on fire today!');
       changeBackground ('#box3', '#box5', '#box7');
+      $('.box').off('click');
     }
   }
 });
-
