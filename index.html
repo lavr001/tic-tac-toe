@@ -2,31 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-
-    <!-- set viewport to device width to allow responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"></script>
-
-    <!-- Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-    <!-- link to custom stylesheet (always require after Bootstrap) -->
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
 
-    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">£
-
-    <!-- link to custom javascript file (always require after external JS libraries) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <title>Tic Tac Toe</title>
   </head>
+
   <body>
-  <audio autoplay>
-    <source src="vanburen.mp3">
-  </audio>
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
@@ -34,7 +23,6 @@
           <div id="winner"></div>
         </div>
       </div>
-
       <div class="row">
         <div class="col-md-6 col-md-offset-3" id="board">
           <div class="row">
@@ -52,9 +40,7 @@
             <div class="col-md-4 box" id="box8"></div>
             <div class="col-md-4 box" id="box9"></div>
           </div>
-
         </div>
-
         <button id="reset" class="btn btn-lg btn-primary btn-circle"><i class="fa fa-plus">New Game</i></button>
       </div>
     </div>

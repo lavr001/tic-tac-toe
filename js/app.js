@@ -2,170 +2,40 @@ $(document).ready(function() {
 
   var Player1 = prompt('Enter player 1 name');
   var Player2 = prompt('Enter player 2 name');
-
   var boxes = [];
-
-  var clickedBoxes = [false, false, false, false, false, false,false, false, false]
-
   var counter = 0;
 
-  $($('.box')[0]).on('click', function () {
-    if (clickedBoxes[0] === false) {
-      if (counter % 2 === 0) {
-        $(this).append('X').addClass('xStyle');
-      } else {
-        $(this).append('0').addClass('oStyle');
-      }
+  $('.box').click(function(){
+    var $this = $(this);
+    if($this.data('clicked')) {
+      alert('You already clicked this box');
+    } else {
+      $this.data('clicked', true);
+        if (counter % 2 === 0) {
+          $(this).append('X').addClass('xStyle');
+        } else {
+          $(this).append('0').addClass('oStyle');
+        }
       counter++;
-    }
-    if (clickedBoxes[0] === true) {
-      alert('You already clicked this box!');
-    }
-    clickedBoxes[0] = true;
-    draw(clickedBoxes);
-    isWinner();
-  });
-  $($('.box')[1]).on('click', function () {
-    if (clickedBoxes[1] === false) {
-      if (counter % 2 === 0) {
-        $(this).append('X').addClass('xStyle');
-      } else {
-        $(this).append('0').addClass('oStyle');
+      isWinner();
+      if (boardHasEmptyBoxes() === false) {
+        $('#winner').text("It's a draw");
       }
-      counter++;
     }
-    if (clickedBoxes[1] === true) {
-      alert('You already clicked this box!');
-    }
-    clickedBoxes[1] = true;
-    draw(clickedBoxes);
-    isWinner();
-  });
-  $($('.box')[2]).on('click', function () {
-    if (clickedBoxes[2] === false) {
-      if (counter % 2 === 0) {
-        $(this).append('X').addClass('xStyle');
-      } else {
-        $(this).append('0').addClass('oStyle');
-      }
-      counter++;
-    }
-    if (clickedBoxes[2] === true) {
-      alert('You already clicked this box!');
-    }
-    clickedBoxes[2] = true;
-    draw(clickedBoxes);
-    isWinner();
-  });
-  $($('.box')[3]).on('click', function () {
-    if (clickedBoxes[3] === false) {
-      if (counter % 2 === 0) {
-        $(this).append('X').addClass('xStyle');
-      } else {
-        $(this).append('0').addClass('oStyle');
-      }
-      counter++;
-    }
-    if (clickedBoxes[3] === true) {
-      alert('You already clicked this box!');
-    }
-    clickedBoxes[3] = true;
-    draw(clickedBoxes);
-    isWinner();
-  });
-  $($('.box')[4]).on('click', function () {
-    if (clickedBoxes[4] === false) {
-      if (counter % 2 === 0) {
-        $(this).append('X').addClass('xStyle');
-      } else {
-        $(this).append('0').addClass('oStyle');
-      }
-      counter++;
-    }
-    if (clickedBoxes[4] === true) {
-      alert('You already clicked this box!');
-    }
-    clickedBoxes[4] = true;
-    draw(clickedBoxes);
-    isWinner();
-  });
-  $($('.box')[5]).on('click', function () {
-    if (clickedBoxes[5] === false) {
-      if (counter % 2 === 0) {
-        $(this).append('X').addClass('xStyle');
-      } else {
-        $(this).append('0').addClass('oStyle');
-      }
-      counter++;
-    }
-    if (clickedBoxes[5] === true) {
-      alert('You already clicked this box!');
-    }
-    clickedBoxes[5] = true;
-    draw(clickedBoxes);
-    isWinner();
-  });
-  $($('.box')[6]).on('click', function () {
-    if (clickedBoxes[6] === false) {
-      if (counter % 2 === 0) {
-        $(this).append('X').addClass('xStyle');
-      } else {
-        $(this).append('0').addClass('oStyle');
-      }
-      counter++;
-    }
-    if (clickedBoxes[6] === true) {
-      alert('You already clicked this box!');
-    }
-    clickedBoxes[6] = true;
-    draw(clickedBoxes);
-    isWinner();
-  });
-  $($('.box')[7]).on('click', function () {
-    if (clickedBoxes[7] === false) {
-      if (counter % 2 === 0) {
-        $(this).append('X').addClass('xStyle');
-      } else {
-        $(this).append('0').addClass('oStyle');
-      }
-      counter++;
-    }
-    if (clickedBoxes[7] === true) {
-      alert('You already clicked this box!');
-    }
-    clickedBoxes[7] = true;
-    draw(clickedBoxes);
-    isWinner();
-  });
-  $($('.box')[8]).on('click', function () {
-    if (clickedBoxes[8] === false) {
-      if (counter % 2 === 0) {
-        $(this).append('X').addClass('xStyle');
-      } else {
-        $(this).append('0').addClass('oStyle');
-      }
-      counter++;
-    }
-    if (clickedBoxes[8] === true) {
-      alert('You already clicked this box!');
-    }
-    clickedBoxes[8] = true;
-    draw(clickedBoxes);
-    isWinner();
   });
 
-  $('#reset').on('click', function resetBoard () {
-    counter = 0;
-    $('.box').empty();
-    $('#winner').empty();
-    $('.box').removeClass('xStyle oStyle');
-    for (var i = 0; i < clickedBoxes.length; i++) {
-      clickedBoxes[i] = false;
+  function boardHasEmptyBoxes() {
+    var hasEmptyBoxes = false;
+    for (var i = 0; i < $('.box').length; i++){
+      if ($('.box').eq(i).text() === '') {
+        hasEmptyBoxes = true;
+      }
     }
-    Player1 = prompt('Enter player 1 name');
-    Player2 = prompt('Enter player 2 name');
-    clearInterval(interval);
-    $('.box').css('background-color', '#FFB424');
+    return hasEmptyBoxes;
+  }
+
+  $('#reset').on('click', function resetBoard () {
+      location.reload();
   });
 
   var interval;
@@ -181,14 +51,8 @@ $(document).ready(function() {
         $(arg2).css('background', '#27FF1C');
         $(arg3).css('background', '#27FF1C');
       }
-      isTrue = !isTrue; //changing from false to true
+      isTrue = !isTrue;
     }, 200);
-  }
-
-  function draw (clickedBoxes) {
-    if (clickedBoxes.indexOf(false) === -1) {
-      $('#winner').text("It's a draw");
-    }
   }
 
   function isWinner () {
