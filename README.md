@@ -2,7 +2,7 @@
 
 ## We are all know the rules!
 
-<img src="./TicTacToeWinner.png" width="80%">
+<img src="css/TicTacToeWinner.png" width="80%">
 
 ## Technologies Used
 
