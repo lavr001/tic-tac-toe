@@ -1,5 +1,5 @@
 body {
-  background-image: url('css/tictactoe.jpg');
+  background-image: url('./tictactoe.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: none;
