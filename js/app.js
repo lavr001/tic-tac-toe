@@ -20,6 +20,7 @@ $(document).ready(function() {
       isWinner();
       if (boardHasEmptyBoxes() === false) {
         $('#winner').text("It's a draw");
+        isWinner();
       }
     }
   });
